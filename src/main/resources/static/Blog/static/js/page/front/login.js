@@ -209,27 +209,21 @@
     };
     // 点击注册按钮
     document.querySelector('#content .main .box .register form .submit').addEventListener('click', function () {
-        let isReg = false;
-        if (isReg) {
-            if (isToRegister()) {
-                buguAjax({
-                    "method": 'post',
-                    "param": getFormKeyAndValue(document.querySelector('#content .main .box .register form')),
-                    "url": '/user/register',
-                    "success": function (obj) {
-                        if (obj.code === 200) {
-                            messagePopOfSuccess(obj.msg + '，稍后自动刷新页面');
-                            jumpToPage(3, location.href);
-                        } else if (obj.code === 400) {
-                            messagePopOfWarn(obj.msg);
-                        }
-                    },
-                });
-            } else {
-                popMessage('信息填写不符合规则', 'warn');
-            }
+        if (isToRegister()) {
+            buguAjax({
+                "method": 'post',
+                "param": getFormKeyAndValue(document.querySelector('#content .main .box .register form')),
+                "url": '/user/register',
+                "success": function (obj) {
+                    if (obj.code === 200) {
+                        messagePopOfSuccess(obj.msg);
+                    } else if (obj.code === 400) {
+                        messagePopOfWarn(obj.msg);
+                    }
+                },
+            });
         } else {
-            popMessage('注册功能暂不开放', 'warn');
+            popMessage('信息填写不符合规则', 'warn');
         }
     });
 }());

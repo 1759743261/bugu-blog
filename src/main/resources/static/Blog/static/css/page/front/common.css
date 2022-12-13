@@ -335,6 +335,15 @@ body {
     transform: rotateX(0);
 }
 
+
+#header .bottom .nav .username {
+    float: right;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 44px;
+}
+
+
 #header .bottom .nav .login {
     float: right;
     height: 100%;

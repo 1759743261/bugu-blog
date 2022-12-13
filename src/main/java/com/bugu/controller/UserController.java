@@ -48,7 +48,7 @@ public class UserController {
     // http://localhost:8080/user/register
     @RequestMapping("/register")
     public String register(User user) {
-        boolean f = true;
+        boolean f = !true;
         if (!f) {
             if (user != null) {
                 if (userService.getUserByPhone(user.getPhone()) != null) {

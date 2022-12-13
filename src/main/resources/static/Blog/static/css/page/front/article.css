@@ -362,10 +362,19 @@
     width: 100%;
     background-color: var(--buguBackgroundColor);
     /* 后续可修改，最后是动态撑开高度 */
-    height: 10px;
     /*height: 300px;*/
     background-color: pink;
     /*display: none;*/
+}
+
+
+#content .main .main-left .left-item .article-box .article-fo .button {
+    display: inline-block;
+    height: 40px;
+    background-color: red;
+    line-height: 40px;
+    padding: 0 20px;
+    cursor: pointer;
 }
 
 
