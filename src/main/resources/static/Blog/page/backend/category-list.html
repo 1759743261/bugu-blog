@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TDK三大标签 -->
+    <title>后台管理-分类列表</title>
+    <!-- 网站的图标 -->
+    <link rel="shortcut icon" href="/Blog/static/img/system/favicon.ico">
+    <!-- CSS文件【全局变量、公共样式、全局样式、页面样式、插件、、、】 -->
+    <link rel="stylesheet" href="/Blog/static/css/utils/buguVar.css">
+    <link rel="stylesheet" href="/Blog/static/css/utils/base.css">
+    <link rel="stylesheet" href="/Blog/static/css/utils/common.css">
+    <link rel="stylesheet" href="/Blog/static/css/page/backend/common.css">
+    <link rel="stylesheet" href="/Blog/static/css/page/backend/table.css">
+</head>
+
+
+<body>
+    <div id="container">
+
+
+        <!--====================分==========割==========线==========分==========割==========线==========分==========割==========线====================-->
+
+
+        <div id="sidebar">
+            <div class="sidebar-box">
+
+                <div class="user">
+                    <h1 class="name">
+                        <a href="/Blog/page/front/index.html">
+                            BuGu
+                        </a>
+                    </h1>
+                </div>
+
+                <div class="sep"></div>
+
+                <ul class="menu">
+
+                    <li class="menu-item">
+
+                        <div class="menu-title">
+
+                            <div class="left-icon">
+                                <svg>
+                                    <use href="#icon-guanli-index"></use>
+                                </svg>
+                            </div>
+
+                            <div class="title">
+                                <a href="index.html">后台首页</a>
+                            </div>
+                        </div>
+
+                    </li>
+
+                    <li class="menu-item" is-open="0">
+
+                        <div class="menu-title">
+
+                            <div class="left-icon">
+                                <svg>
+                                    <use href="#icon-guanli-article"></use>
+                                </svg>
+                            </div>
+
+                            <div class="title">
+                                文章管理
+                            </div>
+
+                            <div class="right-icon">
+                                <svg>
+                                    <use href="#icon-jiantou"></use>
+                                </svg>
+                            </div>
+
+                        </div>
+
+                        <ul class="menu-option">
+                            <li is-active="0"><a href="./article-list.html">文章列表</a></li>
+                            <li is-active="0"><a href="./article-add.html">发布博客</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li class="menu-item" is-open="1">
+
+                        <div class="menu-title">
+
+                            <div class="left-icon">
+                                <svg>
+                                    <use href="#icon-guanli-category"></use>
+                                </svg>
+                            </div>
+
+                            <div class="title">
+                                分类管理
+                            </div>
+
+                            <div class="right-icon">
+                                <svg>
+                                    <use href="#icon-jiantou"></use>
+                                </svg>
+                            </div>
+
+                        </div>
+
+                        <ul class="menu-option">
+                            <li is-active="1"><a href="./category-list.html">分类列表</a></li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+
+        <!--====================分==========割==========线==========分==========割==========线==========分==========割==========线====================-->
+
+
+        <div id="content">
+            <div class="content-box">
+
+                <div class="header">
+                    <div class="header-box">
+
+                        <div class="menu-active-btn">
+                            <svg class="icon">
+                                <use href="#icon-shouqicaidan"></use>
+                            </svg>
+                        </div>
+
+                        <div class="xxyxyyxyx">
+                            今天我寒夜里看雪飘过
+                        </div>
+
+                        <div class="logout">
+                            退出登录
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="main">
+                    <div class="main-box">
+
+                        <div class="top">
+                            <div class="top-box">
+                                <form onsubmit="return false">
+                                    <div class="item" type="text">
+                                        <input name="condition" type="text" placeholder="请输入分类名称">
+                                    </div>
+                                    <div class="item" type="submit">
+                                        <input class="search" type="submit" value="搜索分类">
+                                    </div>
+                                    <div class="item" type="submit">
+                                        <input class="add" type="submit" value="增加分类">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="bottom">
+                            <div class="bottom-box">
+                                <table cellspacing="0" cellpadding="0">
+
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                编号
+                                                <svg class="icon">
+                                                    <use href="#icon-paixu"></use>
+                                                </svg>
+                                            </th>
+                                            <th>分类名称</th>
+                                            <th>
+                                                发布时间
+                                                <svg class="icon">
+                                                    <use href="#icon-paixu"></use>
+                                                </svg>
+                                            </th>
+                                            <th>
+                                                修改时间
+                                                <svg class="icon">
+                                                    <use href="#icon-paixu"></use>
+                                                </svg>
+                                            </th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>0000</td>
+                                            <td>分类名称</td>
+                                            <td>0000-00-00</td>
+                                            <td>0000-00-00</td>
+                                            <td class="action">
+                                                <span class="delete">
+                                                    <a href="#">删除</a>
+                                                </span>
+                                                <span class="update">
+                                                    <a href="#">编辑</a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--====================分==========割==========线==========分==========割==========线==========分==========割==========线====================-->
+
+
+    </div>
+</body>
+
+
+<script src="/Blog/static/js/utils/popMessage.js"></script>
+<script src="/Blog/static/js/utils/popForm.js"></script>
+<script src="/Blog/static/js/utils/iconfont.js"></script>
+<script src="/Blog/static/js/utils/utils.js"></script>
+<script src="/Blog/static/js/page/backend/main.js"></script>
+<script src="/Blog/static/js/page/backend/category-list.js"></script>
+
+
+</html>

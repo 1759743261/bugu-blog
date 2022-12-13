@@ -1,0 +1,445 @@
+/**
+ *  @BuGu: 整体布局
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+html,
+body {
+    height: 100%;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 45px;
+}
+
+
+/**
+ *  @BuGu: 顶部导航栏
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#header {
+    width: 100%;
+    height: 105px;
+}
+
+#header .top {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #ebeef5;
+    background-color: #ffffff;
+}
+
+#header .bottom {
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #ebeef5;
+    box-shadow: 0 10px 10px 0 rgb(0 0 0 / 10%);
+    transition: all .3s;
+    background-color: #ffffff;
+    z-index: 99;
+}
+
+#header .top .nav {
+    height: 100%;
+}
+
+#header .bottom .nav {
+    height: 100%;
+}
+
+#header .top .nav .logo {
+    position: relative;
+    float: left;
+    width: 11%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#header .top .nav .logo h1 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Logo文本不灵不灵的动画 */
+@keyframes logoBuLingBuLing {
+    0% {
+        text-shadow: 0 0 3px #333,
+            0 0 3px #333,
+            0 0 3px #333,
+            0 0 3px #333;
+    }
+
+    25% {
+        text-shadow: 0 0 4px #333,
+            0 0 4px #333,
+            0 0 4px #333,
+            0 0 4px #333;
+    }
+
+    50% {
+        text-shadow: 0 0 5px #333,
+            0 0 5px #333,
+            0 0 5px #333,
+            0 0 5px #333;
+    }
+
+    75% {
+        text-shadow: 0 0 6px #333,
+            0 0 6px #333,
+            0 0 6px #333,
+            0 0 6px #333;
+    }
+
+    100% {
+        text-shadow: 0 0 7px #333,
+            0 0 7px #333,
+            0 0 7px #333,
+            0 0 7px #333;
+    }
+}
+
+#header .top .nav .logo h1 a {
+    font-size: 40px;
+    font-style: oblique;
+    line-height: 59px;
+    animation: logoBuLingBuLing .4s alternate infinite;
+    color: var(--buguColor);
+}
+
+/* Logo线条滚动的动画 */
+@keyframes logoScrollLine {
+    0% {
+        top: -157px;
+        left: -7px;
+        transform: rotateZ(50deg);
+    }
+
+    24% {
+        top: -92px;
+        left: 157px;
+        transform: rotateZ(50deg);
+    }
+
+    25% {
+        top: -155px;
+        left: 149px;
+        transform: rotateZ(-50deg);
+    }
+
+    49% {
+        top: -90px;
+        left: -15px;
+        transform: rotateZ(-50deg);
+    }
+
+    50% {
+        top: -92px;
+        left: 157px;
+        transform: rotateZ(50deg);
+    }
+
+    74% {
+        top: -157px;
+        left: -7px;
+        transform: rotateZ(50deg);
+    }
+
+    75% {
+        top: -90px;
+        left: -15px;
+        transform: rotateZ(-50deg);
+    }
+
+    100% {
+        top: -155px;
+        left: 149px;
+        transform: rotateZ(-50deg);
+    }
+}
+
+#header .top .nav .logo .logo-scroll-line {
+    position: absolute;
+    width: 12px;
+    height: 300px;
+    background-color: #ffffff;
+    opacity: .8;
+    animation: logoScrollLine 6s ease-in-out 0s infinite normal backwards;
+}
+
+#header .top .nav .link {
+    float: left;
+    height: 100%;
+}
+
+#header .top .nav .link ul {
+    width: 100%;
+    height: 100%;
+}
+
+#header .top .nav .link ul li {
+    position: relative;
+    float: left;
+    height: 100%;
+}
+
+#header .top .nav .link ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 59px;
+    color: var(--buguFontColor);
+    transition: all .3s;
+}
+
+#header .top .nav .link ul li[class="clicked"] a,
+#header .top .nav .link ul li:hover a {
+    color: var(--buguColor);
+}
+
+#header .top .nav .search {
+    float: right;
+    position: relative;
+    width: 30%;
+    height: 100%;
+}
+
+#header .top .nav .search form {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 36px;
+}
+
+#header .top .nav .search .search-text {
+    float: left;
+    padding: 0 10px;
+    width: 80%;
+    height: 36px;
+    font-size: 16px;
+    border: 0;
+    background-color: var(--buguBackgroundColor);
+    outline: none;
+}
+
+#header .top .nav .search .search-submit {
+    float: right;
+    width: 20%;
+    height: 36px;
+    font-size: 16px;
+    font-style: oblique;
+    font-weight: 600;
+    color: #ffffff;
+    border: 0;
+    background-color: var(--buguColor);
+}
+
+#header .bottom .nav .kind {
+    float: left;
+    height: 100%;
+}
+
+#header .bottom .nav .kind .kind-ul {
+    width: 100%;
+    height: 100%;
+}
+
+#header .bottom .nav .kind .kind-ul>li {
+    position: relative;
+    z-index: 999;
+    float: left;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+#header .bottom .nav .kind .kind-ul>li .kind-text {
+    display: block;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 44px;
+    color: var(--buguFontColor);
+    padding: 0 20px;
+    transition: all .3s;
+}
+
+#header .bottom .nav .kind .kind-ul>li .kind-text:hover {
+    color: var(--buguColor);
+}
+
+#header .bottom .nav .kind .kind-ul>li .dropdown {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    transition: all .3s;
+    transform: rotateX(-30deg);
+    background-color: var(--buguColor);
+}
+
+#header .bottom .nav .kind .kind-ul>li .dropdown .dropdown-ul {
+    width: 100%;
+    height: 100%;
+    border-top: 3px solid var(--buguColor);
+    border-bottom: 3px solid var(--buguColor);
+}
+
+#header .bottom .nav .kind .kind-ul>li .dropdown .dropdown-ul li {
+    width: 100%;
+    height: 40px;
+}
+
+#header .bottom .nav .kind .kind-ul>li .dropdown .dropdown-ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--buguFontColor);
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #ffffff;
+}
+
+#header .bottom .nav .kind .kind-ul>li .dropdown .dropdown-ul li a:hover {
+    color: var(--buguColor);
+    background-color: #f2f6fc;
+}
+
+#header .bottom .nav .kind .kind-ul>li {
+    overflow: hidden;
+}
+
+#header .bottom .nav .kind .kind-ul>li:hover {
+    overflow: visible;
+}
+
+#header .bottom .nav .kind .kind-ul>li .dropdown {
+    opacity: 0;
+}
+
+#header .bottom .nav .kind .kind-ul>li:hover .dropdown {
+    opacity: 1;
+    transform: rotateX(0);
+}
+
+#header .bottom .nav .login {
+    float: right;
+    height: 100%;
+}
+
+#header .bottom .nav .login a {
+    display: block;
+    height: 100%;
+    font-size: 16px;
+    line-height: 40px;
+    color: var(--buguFontColor);
+}
+
+#header .bottom .nav .login a:hover {
+    color: var(--buguColor);
+}
+
+
+/**
+ *  @BuGu: 底部页脚
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background-color: #ffffff;
+    border-top: 3px solid var(--buguColor);
+}
+
+#footer .footer-box {
+    text-align: center;
+}
+
+#footer .footer-box>div {
+    margin-right: 20px;
+}
+
+#footer .footer-box .footer-item {
+    display: inline-block;
+    line-height: 45px;
+    color: var(--buguFontColor);
+}
+
+#footer .footer-box .footer-item p a {
+    color: var(--buguColor);
+}
+
+
+/**
+ *  @BuGu: 侧边返回顶部模块
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#side {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+}
+
+#side .item {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 32px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+#side .item svg {
+    color: var(--buguFontColor);
+    transition: all .3s;
+}
+
+#side .item svg:hover {
+    color: var(--buguColor);
+}
+
+
+/**
+ *  @BuGu: 侧边返回顶部模块——小火箭
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#side .item-returnTop {
+    display: none;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+@keyframes huoJianAnimation {
+    0% {
+        line-height: 50px;
+    }
+
+    100% {
+        line-height: 76px;
+    }
+}
+
+#side .item-returnTop:hover {
+    background-color: var(--buguBackgroundColor);
+    animation: huoJianAnimation .5s ease-in-out 0s 1 normal forwards;
+}

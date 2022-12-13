@@ -1,0 +1,426 @@
+/**
+ *  @BuGu: 主布局
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#content .main {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#content .main .main-left {
+    float: left;
+    width: 79%;
+}
+
+#content .main .main-right {
+    float: right;
+    width: 20%;
+}
+
+
+/**
+ *  @BuGu: 左边的主布局
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#content .main .main-left .left-item:nth-child(n+2) {
+    margin-top: 15px;
+}
+
+
+/**
+ *  @BuGu: 右边模块——布局
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#content .main .main-right .right-item {
+    width: 270px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 15px 0 rgb(0 0 0 / 10%);
+    overflow: hidden;
+}
+
+#content .main .main-right .right-item:nth-child(n+2) {
+    margin-top: 15px;
+}
+
+#content .main .main-right .right-item .hd {
+    width: 100%;
+    height: 45px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+#content .main .main-right .right-item .bd {
+    width: 100%;
+    padding: 10px;
+}
+
+#content .main .main-right .right-item .hd .hd-box {
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #ebeef5;
+}
+
+#content .main .main-right .right-item .bd .bd-box {
+    width: 100%;
+    height: 100%;
+}
+
+#content .main .main-right .right-item .hd .hd-box .svg {
+    float: left;
+    width: 30px;
+    height: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 45px;
+    /*color: var(--buguColor);*/
+}
+
+#content .main .main-right .right-item .hd .hd-box .title {
+    float: left;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 45px;
+    /*color: var(--buguColor);*/
+}
+
+
+/**
+ *  @BuGu: 右侧模块——目录
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#content .main .main-right .toc .hd .hd-box .svg {
+    cursor: pointer;
+}
+
+#content .main .main-right .toc .bd .bd-box {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-left: 5px;
+}
+
+#content .main .main-right .toc .bd .bd-box[flag="0"] {
+    height: 0;
+}
+
+#content .main .main-right .toc .bd .bd-box .item-toc {
+    width: 100%;
+    height: 30px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#content .main .main-right .toc .bd .bd-box .item-toc a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    font-size: 17px;
+    color: var(--buguFontColor);
+    transition: all .3s;
+
+}
+
+#content .main .main-right .toc .bd .bd-box .item-toc a:hover {
+    color: var(--buguColor);
+    font-size: 19px;
+}
+
+#content .main .main-right .toc .bd .bd-box .item-toc[level="1"] {
+    padding-left: 0;
+}
+
+#content .main .main-right .toc .bd .bd-box .item-toc[level="2"] {
+    padding-left: 15px;
+}
+
+#content .main .main-right .toc .bd .bd-box .item-toc[level="3"] {
+    padding-left: 30px;
+}
+
+/* 贼重要的内容，可以使得锚点标签跳转时不会被顶部导航栏遮挡 */
+html {
+    scroll-padding-top: 45px;
+}
+
+
+
+
+/**
+ *  @BuGu: 右边模块——用户
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#content .main .main-right .user {
+    /* 在 #content .main .main-right .right-item 统一设置宽度 */
+    height: auto;
+    background-color: #ffffff;
+}
+
+#content .main .main-right .user .hd {
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100px;
+}
+
+#content .main .main-right .user .hd .user-hd-box {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+#content .main .main-right .user .hd .user-hd-box a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+
+#content .main .main-right .user .hd .user-hd-box a .touxiang {
+    width: 100%;
+    height: 100%;
+    transition: all .3s;
+    /* 用户头像，必须是圆的 */
+    border-radius: 50%;
+    border-radius: 15px;
+}
+
+#content .main .main-right .user .hd .user-hd-box a .touxiang:hover {
+    transform: scale(1.2);
+}
+
+#content .main .main-right .user .bd {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#content .main .main-right .user .bd .user-bd-box {
+    width: 100%;
+    height: 100%;
+}
+
+#content .main .main-right .user .bd .user-bd-box .top {
+    width: 100%;
+}
+
+#content .main .main-right .user .bd .user-bd-box .top .name {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#content .main .main-right .user .bd .user-bd-box .top .name a {
+    color: var(--buguColor);
+    font-size: 24px;
+}
+
+#content .main .main-right .user .bd .user-bd-box .bottom {
+    width: 100%;
+    height: 60px;
+}
+
+#content .main .main-right .user .bd .user-bd-box .bottom .count {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#content .main .main-right .user .bd .user-bd-box .bottom .count li {
+    flex: 1;
+    text-align: center;
+}
+
+#content .main .main-right .user .bd .user-bd-box .bottom .count li .num {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333333;
+}
+
+#content .main .main-right .user .bd .user-bd-box .bottom .count li .title {
+    font-size: 16px;
+    color: var(--buguFontColor);
+}
+
+#content .main .main-right .user .fo {
+    width: 100%;
+    padding: 0 15px;
+}
+
+#content .main .main-right .user .fo .user-fo-box {
+    width: 100%;
+    height: 100%;
+}
+
+#content .main .main-right .user .fo .user-fo-box ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#content .main .main-right .user .fo .user-fo-box ul li {
+    flex: 1;
+    height: 60px;
+    text-align: center;
+}
+
+#content .main .main-right .user .fo .user-fo-box ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#content .main .main-right .user .fo .user-fo-box ul li a:hover {
+    transform: scale(1.1);
+}
+
+#content .main .main-right .user .fo .user-fo-box ul li svg {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#content .main .main-right .user .fo .user-fo-box ul li svg[name="bilibili"] {
+    color: #44bae1;
+}
+
+#content .main .main-right .user .fo .user-fo-box ul li svg[name="csdn"] {
+    color: #fc5531;
+}
+
+#content .main .main-right .user .fo .user-fo-box ul li svg[name="github"] {
+    color: #282d32;
+}
+
+#content .main .main-right .user .fo .user-fo-box ul li svg[name="gitee"] {
+    color: #c71d23;
+}
+
+#content .main .main-right .user .fo .user-fo-box ul li svg[name="email"] {
+    color: var(--buguColor);
+}
+
+#content .main .main-right .user .fo .user-fo-box ul li svg[name="rss"] {
+    color: #000000;
+}
+
+
+
+/**
+ *  @BuGu: 右边模块——Top3
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#content .main .main-right .top3 .bd ul li {
+    width: 100%;
+    transition: all .3s;
+}
+
+#content .main .main-right .top3 .bd ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 10%);
+}
+
+#content .main .main-right .top3 .bd ul li:nth-child(n + 2) {
+    margin-top: 5px;
+}
+
+#content .main .main-right .top3 .bd ul li a {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+#content .main .main-right .top3 .bd ul li a .img {
+    float: left;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+#content .main .main-right .top3 .bd ul li a .img img {
+    width: 100%;
+    height: 100%;
+    transition: all .6s;
+    vertical-align: middle;
+}
+
+#content .main .main-right .top3 .bd ul li a .img img:hover {
+    transform: scale(1.2);
+}
+
+#content .main .main-right .top3 .bd ul li a .content {
+    float: right;
+    width: 185px;
+    height: 60px;
+    padding-left: 5px;
+}
+
+#content .main .main-right .top3 .bd ul li a .content .title {
+    width: 100%;
+    height: 30px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all .3s;
+}
+
+#content .main .main-right .top3 .bd ul li a .content .date {
+    width: 100%;
+    height: 30px;
+    line-height: 24px;
+    font-size: 14px;
+    color: var(--buguFontColor);
+}
+
+#content .main .main-right .top3 .bd ul li a:hover .content .title {
+    color: var(--buguColor);
+}
+
+
+/**
+ *  @BuGu: 右边模块——公告
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#content .main .main-right .notice .bd .bd-box ul li {
+    width: 100%;
+    height: 30px;
+}
+
+#content .main .main-right .notice .bd .bd-box ul li a {
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+
+#content .main .main-right .notice .bd .bd-box ul li a .title {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    color: var(--buguFontColor);
+    /* 单行文本溢出用省略号 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+    transition: all .3s;
+}
+
+#content .main .main-right .notice .bd .bd-box ul li a:hover .title {
+    color: var(--buguColor);
+    font-size: 20px;
+}

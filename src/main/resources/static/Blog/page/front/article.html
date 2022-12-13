@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TDK三大标签 -->
+    <title>博客详情页面</title>
+    <meta name="description" content="分享编程的快乐">
+    <meta name="keywords" content="BuGU、Java、编程、随缘">
+
+    <!-- 网站的图标 -->
+    <link rel="shortcut icon" href="/Blog/static/img/system/favicon.ico">
+
+    <!-- CSS文件【全局变量、公共样式、全局样式、页面样式、插件、、、】 -->
+    <link rel="stylesheet" href="/Blog/static/css/utils/buguVar.css">
+    <link rel="stylesheet" href="/Blog/static/css/utils/base.css">
+    <link rel="stylesheet" href="/Blog/static/css/utils/common.css">
+    <link rel="stylesheet" href="/Blog/static/css/page/front/common.css">
+    <link rel="stylesheet" href="/Blog/static/css/page/front/main-right.css">
+    <link rel="stylesheet" href="/Blog/static/css/page/front/article.css">
+</head>
+
+
+<body>
+    <div id="container">
+
+
+        <!--====================分==========割==========线==========分==========割==========线==========分==========割==========线====================-->
+
+
+        <div id="header">
+
+            <div class="top">
+                <div class="w nav">
+
+                    <div class="logo">
+                        <h1>
+                            <a href="index.html" title="不谷博客">
+                                BG
+                            </a>
+                        </h1>
+                        <div class="logo-scroll-line"></div>
+                    </div>
+
+                    <div class="link">
+                        <ul>
+                            <li class="un-clicked">
+                                <a href="index.html">首页</a>
+                            </li>
+
+                            <li class="un-clicked">
+                                <a href="archives.html">时间轴</a>
+                            </li>
+
+                            <li class="un-clicked" id="about-me">
+                                <a href="">关于我</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="search">
+                        <form onsubmit="return false">
+
+                            <input class="search-submit" type="submit" value="Search">
+
+                            <input name="condition" class="search-text" type="text" placeholder="请输入关键字">
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="w nav">
+
+                    <div class="kind">
+                        <ul class="kind-ul">
+
+                            <!-- 待开发功能 -->
+                            <li>
+                                <a class="kind-text" href="javascript:void(0);">
+                                    下选框
+                                </a>
+                                <div class="dropdown">
+                                    <ul class="dropdown-ul">
+                                        <li><a href="javascript:void(0);">下选框1</a></li>
+                                        <li><a href="javascript:void(0);">下选框2</a></li>
+                                        <li><a href="javascript:void(0);">下选框3</a></li>
+                                        <li><a href="javascript:void(0);">下选框4</a></li>
+                                        <li><a href="javascript:void(0);">下选框1</a></li>
+                                        <li><a href="javascript:void(0);">下选框2</a></li>
+                                        <li><a href="javascript:void(0);">下选框3</a></li>
+                                        <li><a href="javascript:void(0);">下选框4</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--====================分==========割==========线==========分==========割==========线==========分==========割==========线====================-->
+
+
+        <div id="content">
+            <div class="w main clearfix">
+
+                <div class="main-left">
+
+                    <div class="left-item">
+                        <div class="article-box">
+
+                            <div class="article-hd">
+
+                                <div class="item-1">
+                                    <div class="title">
+                                        <h1>文章标题</h1>
+                                    </div>
+                                </div>
+
+                                <div class="item-2">
+                                    <div class="info">
+                                        <ul>
+                                            <li class="read">
+                                                <svg class="icon">
+                                                    <use href="#icon-yuedu"></use>
+                                                </svg>
+                                                <span>26</span>阅读
+                                            </li>
+                                            <li class="like">
+                                                <svg class="icon">
+                                                    <use href="#icon-dianzan"></use>
+                                                </svg>
+                                                <span>26</span>点赞
+                                            </li>
+                                            <li class="comment">
+                                                <svg class="icon">
+                                                    <use href="#icon-pinglun"></use>
+                                                </svg>
+                                                <span>26</span>评论
+                                            </li>
+                                            <li class="date">
+                                                <svg class="icon">
+                                                    <use href="#icon-shijian"></use>
+                                                </svg>
+                                                <span>2022-10-23</span>
+                                            </li>
+                                            <li class="category">
+                                                <a href="#">
+                                                    <svg class="icon">
+                                                        <use href="#icon-leibie"></use>
+                                                    </svg>
+                                                    <span>文章分类</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="editor">
+                                        <a href="javascript:void(0);">
+                                            <svg class="icon">
+                                                <use href="#icon-bianji"></use>
+                                            </svg>
+                                            <span>编辑</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="item-3">
+                                    <div class="update-time">
+                                        本文最后更新于0000年00月00日，已超过00天没有更新，若内容或图片失效，请留言反馈
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="seb"></div>
+
+                            <div class="article-bd">
+
+                            </div>
+
+                            <div class="seb"></div>
+
+                            <div class="article-fo">
+                                <div class="like" >
+                                    点赞
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="main-right">
+
+                    <div class="right-item toc">
+                        <div class="hd">
+                            <div class="hd-box">
+                                <div class="svg">
+                                    <svg class="icon">
+                                        <use href="#icon-mulu"></use>
+                                    </svg>
+                                </div>
+                                <div class="title">目录</div>
+                            </div>
+                        </div>
+                        <div class="bd">
+                            <div class="bd-box" flag="1">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--====================分==========割==========线==========分==========割==========线==========分==========割==========线====================-->
+
+
+        <div id="footer">
+            <div class="w footer-box">
+
+                <div class="footer-item blog-run-time">
+                    <p>
+                        本站已运行<span class="item day">00</span>天<span class="item hour">00</span>时<span class="item minute">00</span>分<span class="item second">00</span>秒
+                    </p>
+                </div>
+
+                <div class="footer-item blog-id">
+                    <p>
+                        <a href="javascript:void(0);" target="_blank">网站暂未备案yyy</a>
+                    </p>
+                </div>
+
+                <div class="footer-item">
+                    <p>
+                        本网站由<a href="https://www.qiniu.com/" target="_blank">七牛云</a>提供存储服务
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!--====================分==========割==========线==========分==========割==========线==========分==========割==========线====================-->
+
+
+        <div id="side">
+
+            <div class="item item-index">
+                <a href="./index.html">
+                    <svg class="icon">
+                        <use href="#icon-shouye"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="item item-returnTop">
+                <svg class="icon">
+                    <use href="#icon-huojian"></use>
+                </svg>
+            </div>
+
+        </div>
+
+
+        <!--====================分==========割==========线==========分==========割==========线==========分==========割==========线====================-->
+
+
+    </div>
+</body>
+
+
+<!-- JavaScript文件【字体、工具、公共、页面、插件、、、】-->
+<script src="/Blog/static/js/utils/popMessage.js"></script>
+<script src="/Blog/static/js/utils/iconfont.js"></script>
+<script src="/Blog/static/js/utils/utils.js"></script>
+<script src="/Blog/static/js/page/front/common.js"></script>
+<script src="/Blog/static/js/page/front/article.js"></script>
+
+
+
+</html>

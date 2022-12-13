@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:mysql://120.24.72.223:3306/bugu_blog_test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Wsad+8246
+
+
+# 日志
+logging:
+  level:
+    root: info
+  # 日志输出到的文件
+  file:
+    # 主文件，超过大小后使用后面的文件
+    name: bugu-blog.log
+
+
+# 七牛云存储
+qiniu:
+  ak: iRaiodVHJ9awZvGRfOUPg_SI0MV1Q-VDFsZsJiiT
+  sk: YDlX517gtWLvreFHDDvs6z7eVseKDXfSD1Gloazk
+  bucket: bugu-blog
+  domain: http://rmi7wxav0.hn-bkt.clouddn.com
+
+
+# 系统服务
+server:
+  port: 8080

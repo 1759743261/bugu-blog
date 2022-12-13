@@ -1,0 +1,35 @@
+/**
+ *  @BuGu: CSS变量
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+:root {
+    /* 默认的字体颜色【使用中】 */
+    --commonFontColor: #909399;
+
+
+    --buguBackgroundColor: #eef1f6;
+    --buguBackgroundColor: #e6e6e6;
+    --buguBackgroundColor: #f4f5f5;
+
+
+    --buguColor: #000;
+    --buguColor: #b294db;
+    --buguColor: #409eff;
+    --buguColor: #baccd9;
+    --buguColor: #207f4c;
+
+
+
+    --buguFontColor: #909399;
+
+
+    /* 蓝色【使用中】 */
+    /*--commonColorBlue: #409eff;*/
+
+    /**
+        蓝色      #409eff
+        红色      #de2910ff
+        紫色      #6e0d64
+        天蓝色     #87ceeb
+     */
+}

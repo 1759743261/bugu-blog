@@ -1,0 +1,107 @@
+/**
+ *  @BuGu: 清除浮动
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+.clearfix::after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: "";
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/**
+ *  @BuGu: 版心
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+.w {
+    width: 1300px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+/**
+ *  @BuGu: 初始化设置
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+a,
+input,
+img {
+    cursor: pointer;
+}
+
+html {
+    background-color: #e6e6e6;
+    background-color: #eef1f6;
+    background-color: var(--buguBackgroundColor);
+}
+
+
+/**
+ *  @BuGu: 字体样式
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+/*@font-face {*/
+/*    font-family: '猫啃网糖圆体';*/
+/*    src: url(../../font/mao_ken_wang_tang_yuan_ti/mao_ken_wang_tang_yuan_ti.ttf);*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: '站酷仓耳渔阳体';*/
+/*    src: url(../../font/zhan_ku_cang_er_yu_yang_ti/zhan_ku_cang_er_yu_yang_ti_1.ttf);*/
+/*    src: url(../../font/zhan_ku_cang_er_yu_yang_ti/zhan_ku_cang_er_yu_yang_ti_2.ttf);*/
+/*    src: url(../../font/zhan_ku_cang_er_yu_yang_ti/zhan_ku_cang_er_yu_yang_ti_3.ttf);*/
+/*    src: url(../../font/zhan_ku_cang_er_yu_yang_ti/zhan_ku_cang_er_yu_yang_ti_4.ttf);*/
+/*    src: url(../../font/zhan_ku_cang_er_yu_yang_ti/zhan_ku_cang_er_yu_yang_ti_5.ttf);*/
+/*}*/
+
+html {
+    -webkit-font-smoothing: antialiased;
+    /*font-family: "猫啃网糖圆体", "微软雅黑";*/
+    font-family: "微软雅黑", serif;
+}
+
+
+/**
+ *  @BuGu: 滚动条样式
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+}
+
+/*滑块样式*/
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-color: #c0c4cc;
+}
+
+/*当前窗口失去焦点时的滑块样式*/
+::-webkit-scrollbar-thumb:window-inactive {
+    background-color: #fff;
+}

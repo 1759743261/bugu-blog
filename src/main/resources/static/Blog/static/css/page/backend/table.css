@@ -1,0 +1,192 @@
+/**
+ *  @BuGu: 整体布局
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+.main-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main-box>.top {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 10%;
+}
+
+.main-box>.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+}
+
+
+/**
+ *  @BuGu: 顶部搜索条件的布局
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+.main-box>.top .top-box {
+    width: 100%;
+    height: 100%;
+}
+
+.main-box>.top .top-box {
+    width: 100%;
+    height: 100%;
+}
+
+.main-box>.top .top-box form {
+    width: 100%;
+    height: 100%;
+}
+
+.main-box>.top .top-box form .item {
+    position: relative;
+    float: left;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.main-box>.top .top-box form .item input {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border-radius: 3px;
+    border: 0;
+}
+
+.main-box>.top .top-box form .item[type="text"] {
+    width: 150px;
+    height: 100%;
+}
+
+.main-box>.top .top-box form .item[type="text"] input {
+    padding-left: 10px;
+    color: #9f9fa1;
+    width: 100%;
+    height: 40px;
+}
+
+.main-box>.top .top-box form .item[type="submit"] {
+    display: inline-block;
+    width: 80px;
+    height: 100%;
+}
+
+.main-box>.top .top-box form .item[type="submit"] input {
+    width: 100%;
+    height: 35px;
+    color: #fff;
+}
+
+.main-box>.top .top-box form .item[type="submit"] input[class="search"] {
+    background-color: #50a0ed;
+}
+
+.main-box>.top .top-box form .item[type="submit"] input[class="add"] {
+    background-color: #e9657f;
+}
+
+
+/**
+ *  @BuGu: 表格的布局
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+.main-box>.bottom .bottom-box {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.main-box>.bottom .bottom-box table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.main-box>.bottom .bottom-box table thead {
+    width: 100%;
+    height: 40px;
+}
+
+.main-box>.bottom .bottom-box table tbody {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+}
+
+.main-box>.bottom .bottom-box table thead tr,
+.main-box>.bottom .bottom-box table tbody tr {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+}
+
+.main-box>.bottom .bottom-box table tbody tr {
+    border-top: 1px solid #dedede;
+}
+
+.main-box>.bottom .bottom-box table tbody tr:hover {
+    background-color: #dedede;
+}
+
+.main-box>.bottom .bottom-box table thead tr th,
+.main-box>.bottom .bottom-box table tbody tr td {
+    flex: 1;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main-box>.bottom .bottom-box table thead tr th {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main-box>.bottom .bottom-box table tbody tr td {
+    font-size: 18px;
+}
+
+.main-box>.bottom .bottom-box table tbody tr td[class="action"] {
+    text-align: center;
+}
+
+.main-box>.bottom .bottom-box table tbody tr td[class="action"] span {
+    display: inline-block;
+    height: 100%;
+    margin: 0 5px;
+}
+
+.main-box>.bottom .bottom-box table tbody tr td[class="action"] span a {
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 2px;
+    color: #fff;
+    transition: all .3s;
+}
+
+.main-box>.bottom .bottom-box table tbody tr td[class="action"] span a:hover {
+    font-size: 16px;
+}
+
+.main-box>.bottom .bottom-box table tbody tr td[class="action"] .select a {
+    background-color: #21480f;
+}
+
+.main-box>.bottom .bottom-box table tbody tr td[class="action"] .delete a {
+    background-color: #9f9fa1;
+}
+
+.main-box>.bottom .bottom-box table tbody tr td[class="action"] .update a {
+    background-color: #e9657f;
+}

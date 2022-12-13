@@ -1,0 +1,4 @@
+# 选择使用什么环境：dev、pro
+spring:
+  profiles:
+    active: pro

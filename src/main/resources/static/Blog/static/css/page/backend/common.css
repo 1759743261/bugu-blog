@@ -1,0 +1,246 @@
+/**
+ *  @BuGu: 整体布局
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#container {
+    display: flex;
+}
+
+#container #sidebar {
+    width: 180px;
+    height: 100vh;
+    background-color: #fff;
+    transition: all .3s;
+    overflow: hidden;
+}
+
+#container #content {
+    flex: 1;
+    height: 100vh;
+}
+
+#container #content .content-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#container #content .content-box .header {
+    width: 100%;
+    height: 40px;
+}
+
+#container #content .content-box .main {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px 15px 15px;
+    /*background-color: pink;*/
+}
+
+
+/**
+ *  @BuGu: 左侧导航栏——布局
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#container #sidebar .sidebar-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #2f4050;
+}
+
+#container #sidebar .sidebar-box .user {
+    flex: 1;
+    width: 100%;
+    height: auto;
+}
+
+#container #sidebar .sidebar-box .sep {
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+}
+
+#container #sidebar .sidebar-box .menu {
+    flex: 10;
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    padding: 20px 0 30px 0;
+}
+
+#container #sidebar .sidebar-box .menu::-webkit-scrollbar {
+    width: 0;
+}
+
+
+/**
+ *  @BuGu: 左侧导航栏——细节
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#container #sidebar .sidebar-box .user h1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+#container #sidebar .sidebar-box .user h1 a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    padding: 10px 0;
+    color: #fff;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item {
+    width: 100%;
+    cursor: pointer;
+    border-right: 4px solid transparent;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item[is-open="1"] {
+    border-right: 4px solid #1eb8a1;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item .menu-title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    transition: all .3s;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item .menu-title .left-icon,
+#container #sidebar .sidebar-box .menu .menu-item .menu-title .right-icon {
+    width: 45px;
+    height: 40px;
+    text-align: center;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item .menu-title .title {
+    flex: 1;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item[is-open="1"] .menu-title {
+    background-color: #2b4158;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item:nth-child(1) .menu-title .title a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item .menu-title .left-icon svg,
+#container #sidebar .sidebar-box .menu .menu-item .menu-title .right-icon svg {
+    width: 20px;
+    height: 100%;
+    color: #333;
+    transition: all .3s;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item[is-open="1"] .menu-title .right-icon svg {
+    transform: rotateZ(-90deg);
+}
+
+#container #sidebar .sidebar-box .menu .menu-item .menu-option {
+    width: 100%;
+    overflow: hidden;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item .menu-option li {
+    width: 100%;
+    transition: all .3s;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item[is-open="1"] .menu-option li {
+    height: 40px;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item[is-open="0"] .menu-option li {
+    height: 0;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item .menu-option li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    color: #000;
+    padding-left: 50px;
+}
+
+#container #sidebar .sidebar-box .menu .menu-item .menu-option li[is-active="1"] a,
+#container #sidebar .sidebar-box .menu .menu-item .menu-option li a:hover {
+    color: #fff;
+    background-color: #31475e;
+}
+
+
+/**
+ *  @BuGu: 右侧顶部
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+#container #content .content-box .header .header-box {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+}
+
+#container #content .content-box .header .header-box .menu-active-btn {
+    position: relative;
+    width: 20px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#container #content .content-box .header .header-box .menu-active-btn svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #000;
+}
+
+
+#container #content .content-box .header .header-box .xxyxyyxyx {
+    flex: 1;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: red;
+}
+
+#container #content .content-box .header .header-box .logout {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    text-align: right;
+}
+
+
+/**
+ *  @BuGu: 右侧底部
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+/* #container #content .content-box .main .bottom-box {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px 15px 15px;
+    background-color: pink;
+} */

@@ -1,0 +1,25 @@
+/**
+ *  @BuGu: 阿里图标
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+
+/**
+ *  @BuGu: 哀悼日滤镜，给body标签添加类属性即可
+ *  ----------分----------割----------线----------分----------割----------线----------分----------割----------线----------
+ */
+.html {
+    filter: grayscale(90%);
+    -webkit-filter: grayscale(.95);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
